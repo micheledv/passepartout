@@ -1,0 +1,51 @@
+{
+  "launchers": [
+    {
+      "name": "nameOfTheLauncher",
+      "keyFormat": "pem/ppk/anyOther",
+      "terminalCommandList": [
+        "command",
+        "param1",
+        "param2",
+        "paramN",
+        "${shellCommand}"
+      ],
+      "shellCommand": "ssh -t -i ${keyPath} ${user}@${host} ${actionCommand}"
+    }
+  ],
+  "keys": [
+    {
+      "name": "keyName",
+      "paths": {
+        "pem": "/path/of/the/key"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "name": "actionName",
+      "description": "Description of the action",
+      "command": "actual command with spaces",
+      "params": {
+        "given": "Description of the param",
+        "toBeAskedToUser": "Another description"
+      }
+    }
+  ],
+  "servers": [
+    {
+      "name": "Server name",
+      "keyName": "keyName",
+      "user": "sshUsername",
+      "host": "ssh.host.name",
+      "services": [
+        {
+          "actionName": "actionName",
+          "params": {
+            "given": "Hardcoded value for the param, this won't be shown to the user"
+          }
+        }
+      ]
+    }
+  ]
+}

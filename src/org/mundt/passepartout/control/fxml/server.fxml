@@ -1,0 +1,5 @@
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Tab?>
+<fx:root xmlns:fx="http://javafx.com/fxml" type="javafx.scene.control.Tab" closable="false">
+    <Accordion fx:id="servicesContainer"/>
+</fx:root>
